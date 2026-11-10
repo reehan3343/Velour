@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VELOUR — Modern Fashion House</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{serif:['Playfair Display','serif'],sans:['Inter','sans-serif']},colors:{gold:'#c9a24b',ink:'#0e0e10'}}}}</script>
+<style>html{scroll-behavior:smooth}.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.15)}.txt-grad{background:linear-gradient(90deg,#f3d98b,#c9a24b,#fff1c1);-webkit-background-clip:text;color:transparent}</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3d98b'/%3E%3Cstop offset='1' stop-color='%23c9a24b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230e0e10'/%3E%3Crect x='3' y='3' width='58' height='58' rx='13' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='bold' text-anchor='middle' fill='url(%23g)'%3EV%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bg-ink text-zinc-200 font-sans antialiased">
+
+<header id="nvHeader" class="fixed top-0 inset-x-0 z-[60]">
+  <!-- mobile overlay -->
+  <div id="nvMenu" class="fixed inset-0 bg-ink/95 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center">
+    <div class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-gold/20 blur-3xl"></div>
+    <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-amber-700/20 blur-3xl"></div>
+    <ul class="relative text-center space-y-6"><li><a href="#about" class="font-serif text-4xl text-white hover:text-gold transition">About</a></li>
+      <li><a href="#services" class="font-serif text-4xl text-white hover:text-gold transition">Services</a></li>
+      <li><a href="#demos" class="font-serif text-4xl text-white hover:text-gold transition">Demos</a></li>
+      <li><a href="#features" class="font-serif text-4xl text-white hover:text-gold transition">Features</a></li>
+      <li><a href="#testimonials" class="font-serif text-4xl text-white hover:text-gold transition">Reviews</a></li>
+      <li><a href="#contact" class="font-serif text-4xl text-white hover:text-gold transition">Contact</a></li></ul>
+    <a href="shop.html" class="relative mt-12 px-8 py-3 rounded-full bg-gold text-black font-semibold">Shop Now</a>
+  </div>
+
+  <div class="flex justify-center px-4 pt-4">
+    <nav id="nvPill" class="relative w-full max-w-5xl flex items-center justify-between gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-xl pl-3 pr-2 py-2 transition-all duration-500">
+      <span class="pointer-events-none absolute inset-x-10 -bottom-px h-px bg-gradient-to-r from-transparent via-gold to-transparent"></span>
+
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="w-9 h-9 rounded-full bg-gradient-to-br from-[#f3d98b] to-gold text-black font-serif font-black flex items-center justify-center group-hover:rotate-[360deg] transition duration-700">V</span>
+        <span class="font-serif text-lg font-bold tracking-[.3em] text-white hidden sm:block">VELOUR</span>
+      </a>
+
+      <div id="nvLinks" class="relative hidden md:flex items-center">
+        <span id="nvInd" class="absolute top-0 left-0 h-full w-0 rounded-full bg-gold/15 border border-gold/40 shadow-[0_0_20px_rgba(201,162,75,.25)] opacity-0 transition-all duration-300 ease-out"></span>
+        <a href="#about" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">About</a>
+        <a href="#services" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">Services</a>
+        <a href="#demos" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">Demos</a>
+        <a href="#features" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">Features</a>
+        <a href="#testimonials" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">Reviews</a>
+        <a href="#contact" data-active="0" class="relative z-10 px-4 py-2.5 text-[11px] uppercase tracking-[.2em] text-zinc-300 whitespace-nowrap transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <button aria-label="Search" class="w-10 h-10 rounded-full flex items-center justify-center text-zinc-300 hover:text-gold hover:bg-white/10 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <a href="cart.html" aria-label="Cart" class="relative w-10 h-10 rounded-full flex items-center justify-center text-zinc-300 hover:text-gold hover:bg-white/10 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8h12l1 12H5L6 8zM9 8V6a3 3 0 016 0v2"/></svg>
+          <span class="absolute top-0.5 right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-gold text-black text-[10px] font-bold flex items-center justify-center animate-pulse">3</span>
+        </a>
+        <a href="shop.html" class="hidden lg:inline-flex ml-1 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#f3d98b] to-gold text-black text-sm font-semibold hover:shadow-[0_0_30px_rgba(201,162,75,.6)] hover:scale-105 transition">Shop Now</a>
+        <button id="nvBurger" aria-label="Menu" class="md:hidden w-10 h-10 rounded-full flex flex-col items-center justify-center gap-[5px] hover:bg-white/10 transition">
+          <span class="b1 block w-5 h-0.5 bg-white transition duration-300"></span>
+          <span class="b2 block w-5 h-0.5 bg-white transition duration-300"></span>
+          <span class="b3 block w-5 h-0.5 bg-white transition duration-300"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center">
+  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1800&q=80" alt="Fashion model" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+  <div class="relative max-w-7xl mx-auto px-6 pt-24">
+    <p class="text-gold tracking-[.4em] uppercase text-xs mb-6">Autumn / Winter 2026</p>
+    <h1 class="font-serif text-5xl md:text-8xl font-black leading-[1.05] text-white max-w-3xl">Dress the <span class="txt-grad italic">Story</span> You Want to Tell.</h1>
+    <p class="mt-6 max-w-xl text-zinc-300 text-lg font-light">Premium everyday fashion, crafted from sustainable fabrics and delivered to your door.</p>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a href="shop.html" class="px-8 py-4 rounded-full bg-gold text-black font-semibold hover:shadow-[0_0_40px_rgba(201,162,75,.6)] transition">Explore Collection</a>
+      <a href="#demos" class="px-8 py-4 rounded-full glass text-white hover:bg-white/20 transition">View Demos</a>
+    </div>
+    <div class="mt-16 flex gap-10 text-white">
+      <div><p class="font-serif text-3xl">50K+</p><p class="text-xs text-zinc-400 uppercase tracking-widest">Customers</p></div>
+      <div><p class="font-serif text-3xl">1.2K</p><p class="text-xs text-zinc-400 uppercase tracking-widest">Styles</p></div>
+      <div><p class="font-serif text-3xl">4.9★</p><p class="text-xs text-zinc-400 uppercase tracking-widest">Rating</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="Boutique interior" class="rounded-3xl h-[540px] w-full object-cover">
+    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=500&q=80" alt="Folded garments" class="absolute -bottom-10 -right-6 w-48 h-56 object-cover rounded-2xl border-4 border-ink hidden md:block">
+  </div>
+  <div>
+    <p class="text-gold tracking-[.4em] uppercase text-xs mb-4">About Us</p>
+    <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight">Where craftsmanship meets contemporary style.</h2>
+    <p class="mt-6 text-zinc-400 leading-relaxed">Since 2015, Velour has been designing timeless pieces that feel as good as they look. Every garment is cut from ethically sourced fabrics and finished by skilled artisans.</p>
+    <p class="mt-4 text-zinc-400 leading-relaxed">From tailored essentials to statement outerwear, we build wardrobes that last seasons, not weeks.</p>
+    <a href="#contact" class="inline-block mt-8 border-b border-gold text-gold pb-1 hover:tracking-widest transition-all">Talk to our stylists →</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-28 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16"><p class="text-gold tracking-[.4em] uppercase text-xs mb-4">Services</p><h2 class="font-serif text-4xl md:text-5xl text-white">More than just clothing</h2></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="group rounded-3xl overflow-hidden relative h-96"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Tailoring" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div><div class="absolute bottom-6 left-6 right-6"><h3 class="font-serif text-2xl text-white">Custom Tailoring</h3><p class="text-sm text-zinc-300">Made-to-measure suits and dresses.</p></div></div>
+      <div class="group rounded-3xl overflow-hidden relative h-96"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Styling" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div><div class="absolute bottom-6 left-6 right-6"><h3 class="font-serif text-2xl text-white">Personal Styling</h3><p class="text-sm text-zinc-300">1-on-1 sessions with experts.</p></div></div>
+      <div class="group rounded-3xl overflow-hidden relative h-96"><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=700&q=80" alt="Delivery" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div><div class="absolute bottom-6 left-6 right-6"><h3 class="font-serif text-2xl text-white">Express Delivery</h3><p class="text-sm text-zinc-300">Doorstep in 48 hours.</p></div></div>
+      <div class="group rounded-3xl overflow-hidden relative h-96"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Wardrobe" class="w-full h-full object-cover group-hover:scale-110 transition duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div><div class="absolute bottom-6 left-6 right-6"><h3 class="font-serif text-2xl text-white">Wardrobe Refresh</h3><p class="text-sm text-zinc-300">Trade-in and upcycle program.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMOS -->
+<section id="demos" class="py-28 max-w-7xl mx-auto px-6">
+  <div class="text-center mb-16"><p class="text-gold tracking-[.4em] uppercase text-xs mb-4">Demos</p><h2 class="font-serif text-4xl md:text-5xl text-white">Explore our store pages</h2></div>
+  <div class="grid md:grid-cols-3 gap-8">
+    <a href="shop.html" class="group glass rounded-3xl p-3 hover:-translate-y-2 transition"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80" alt="Shop" class="rounded-2xl h-72 w-full object-cover"><div class="p-5"><h3 class="font-serif text-2xl text-white">Shop Page</h3><p class="text-zinc-400 text-sm mt-2">Filterable product grid with hover effects.</p><span class="text-gold text-sm mt-4 inline-block group-hover:translate-x-2 transition">Open demo →</span></div></a>
+    <a href="product.html" class="group glass rounded-3xl p-3 hover:-translate-y-2 transition"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=700&q=80" alt="Product" class="rounded-2xl h-72 w-full object-cover"><div class="p-5"><h3 class="font-serif text-2xl text-white">Product Detail</h3><p class="text-zinc-400 text-sm mt-2">Gallery, sizes, colors and add-to-cart.</p><span class="text-gold text-sm mt-4 inline-block group-hover:translate-x-2 transition">Open demo →</span></div></a>
+    <a href="cart.html" class="group glass rounded-3xl p-3 hover:-translate-y-2 transition"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=700&q=80" alt="Cart" class="rounded-2xl h-72 w-full object-cover"><div class="p-5"><h3 class="font-serif text-2xl text-white">Cart & Checkout</h3><p class="text-zinc-400 text-sm mt-2">Order summary with live quantity totals.</p><span class="text-gold text-sm mt-4 inline-block group-hover:translate-x-2 transition">Open demo →</span></div></a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-28 bg-gradient-to-b from-zinc-950 to-ink">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16"><p class="text-gold tracking-[.4em] uppercase text-xs mb-4">Features</p><h2 class="font-serif text-4xl md:text-5xl text-white">Why shoppers love Velour</h2></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">🧵</div><h3 class="font-serif text-xl text-white mb-2">Premium Fabrics</h3><p class="text-zinc-400 text-sm">Organic cotton, merino wool and Italian linen.</p></div>
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">🚚</div><h3 class="font-serif text-xl text-white mb-2">Free Shipping</h3><p class="text-zinc-400 text-sm">Complimentary delivery on orders over $80.</p></div>
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">↩️</div><h3 class="font-serif text-xl text-white mb-2">30-Day Returns</h3><p class="text-zinc-400 text-sm">Not the right fit? Return it, no questions asked.</p></div>
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">🌱</div><h3 class="font-serif text-xl text-white mb-2">Sustainable</h3><p class="text-zinc-400 text-sm">Eco-friendly dyes and recycled packaging.</p></div>
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">🔒</div><h3 class="font-serif text-xl text-white mb-2">Secure Payments</h3><p class="text-zinc-400 text-sm">Cards, mobile wallets and cash on delivery.</p></div>
+      <div class="glass rounded-3xl p-8 hover:border-gold/60 transition"><div class="text-3xl mb-4">📏</div><h3 class="font-serif text-xl text-white mb-2">Perfect Fit Guide</h3><p class="text-zinc-400 text-sm">Detailed size charts for every piece.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-28 max-w-7xl mx-auto px-6">
+  <div class="text-center mb-16"><p class="text-gold tracking-[.4em] uppercase text-xs mb-4">Testimonials</p><h2 class="font-serif text-4xl md:text-5xl text-white">Loved by thousands</h2></div>
+  <div class="grid md:grid-cols-3 gap-8">
+    <figure class="glass rounded-3xl p-8"><div class="text-gold mb-4">★★★★★</div><blockquote class="text-zinc-300 leading-relaxed">The fit is unreal. I ordered a blazer and it felt custom-made. Fast delivery too!</blockquote><figcaption class="flex items-center gap-4 mt-6"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Sara" class="w-12 h-12 rounded-full object-cover"><div><p class="text-white font-medium">Sara Ahmed</p><p class="text-xs text-zinc-500">Dhaka</p></div></figcaption></figure>
+    <figure class="glass rounded-3xl p-8 md:-translate-y-6"><div class="text-gold mb-4">★★★★★</div><blockquote class="text-zinc-300 leading-relaxed">Quality that rivals luxury brands at a fair price. My whole winter wardrobe is from Velour.</blockquote><figcaption class="flex items-center gap-4 mt-6"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Rafi" class="w-12 h-12 rounded-full object-cover"><div><p class="text-white font-medium">Rafi Hasan</p><p class="text-xs text-zinc-500">Chattogram</p></div></figcaption></figure>
+    <figure class="glass rounded-3xl p-8"><div class="text-gold mb-4">★★★★★</div><blockquote class="text-zinc-300 leading-relaxed">The personal stylist helped me pick outfits for my whole trip. Absolutely worth it.</blockquote><figcaption class="flex items-center gap-4 mt-6"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Nusrat" class="w-12 h-12 rounded-full object-cover"><div><p class="text-white font-medium">Nusrat Jahan</p><p class="text-xs text-zinc-500">Sylhet</p></div></figcaption></figure>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 bg-zinc-950">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14">
+    <div>
+      <p class="text-gold tracking-[.4em] uppercase text-xs mb-4">Contact</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-white leading-tight">Let's find your next favorite outfit.</h2>
+      <div class="mt-8 space-y-4 text-zinc-400"><p>📍 House 12, Road 5, Gulshan, Dhaka</p><p>📞 +880 1700 000000</p><p>✉️ hello@velour.com</p></div>
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Stylist" class="mt-8 rounded-3xl h-56 w-full object-cover">
+    </div>
+    <form class="glass rounded-3xl p-8 space-y-5" onsubmit="event.preventDefault();alert('Thanks! We will reply soon.')">
+      <input required placeholder="Your name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold">
+      <input required type="email" placeholder="Email address" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold">
+      <textarea required rows="5" placeholder="Your message" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-gold"></textarea>
+      <button class="w-full py-4 rounded-xl bg-gold text-black font-semibold hover:shadow-[0_0_30px_rgba(201,162,75,.5)] transition">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <div><p class="font-serif text-2xl tracking-[.3em] text-white">VELOUR</p><p class="text-sm text-zinc-500 mt-4">Modern fashion, made to be lived in.</p></div>
+    <div><p class="text-white mb-4 font-medium">Shop</p><ul class="space-y-2 text-sm text-zinc-500"><li><a href="shop.html" class="hover:text-gold">Women</a></li><li><a href="shop.html" class="hover:text-gold">Men</a></li><li><a href="shop.html" class="hover:text-gold">New Arrivals</a></li></ul></div>
+    <div><p class="text-white mb-4 font-medium">Company</p><ul class="space-y-2 text-sm text-zinc-500"><li><a href="#about" class="hover:text-gold">About</a></li><li><a href="#contact" class="hover:text-gold">Contact</a></li><li><a href="#features" class="hover:text-gold">Features</a></li></ul></div>
+    <div><p class="text-white mb-4 font-medium">Newsletter</p><div class="flex"><input placeholder="Email" class="flex-1 min-w-0 bg-white/5 border border-white/10 rounded-l-full px-4 py-2 text-sm"><button class="bg-gold text-black px-4 rounded-r-full text-sm font-semibold">Join</button></div></div>
+  </div>
+  <p class="text-center text-xs text-zinc-600 mt-14">© 2026 Velour Fashion House. All rights reserved.</p>
+</footer>
+
+<!-- Back to top with scroll progress ring -->
+<button id="toTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-ink/80 backdrop-blur text-gold flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(201,162,75,.5)]">
+  <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 56 56">
+    <circle cx="28" cy="28" r="26" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="3"/>
+    <circle id="toTopRing" cx="28" cy="28" r="26" fill="none" stroke="#c9a24b" stroke-width="3" stroke-linecap="round" stroke-dasharray="163.36" stroke-dashoffset="163.36"/>
+  </svg>
+  <svg class="relative w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+</button>
+<script>
+(()=>{const b=document.getElementById('toTop'),r=document.getElementById('toTopRing'),C=163.36;
+function u(){const h=document.documentElement.scrollHeight-innerHeight,p=h>0?scrollY/h:0;
+r.style.strokeDashoffset=C*(1-p);
+const s=scrollY>300;b.classList.toggle('opacity-0',!s);b.classList.toggle('translate-y-4',!s);b.classList.toggle('pointer-events-none',!s)}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();
+b.onclick=()=>scrollTo({top:0,behavior:'smooth'})})();
+</script>
+
+<script>
+(()=>{
+const pill=document.getElementById('nvPill'),wrap=document.getElementById('nvLinks'),ind=document.getElementById('nvInd'),
+links=[...wrap.querySelectorAll('a')],menu=document.getElementById('nvMenu'),burger=document.getElementById('nvBurger'),
+mlinks=[...menu.querySelectorAll('li')];
+let active=links.find(a=>a.dataset.active==='1')||null;
+function paint(){links.forEach(a=>{const on=a===active;a.classList.toggle('text-gold',on);a.classList.toggle('text-zinc-300',!on)})}
+function mv(a){if(!a){ind.style.opacity=0;return}ind.style.opacity=1;ind.style.width=a.offsetWidth+'px';ind.style.transform='translateX('+a.offsetLeft+'px)'}
+links.forEach(a=>a.addEventListener('mouseenter',()=>mv(a)));
+wrap.addEventListener('mouseleave',()=>mv(active));
+function set(a){if(a===active)return;active=a;paint();mv(a)}
+paint();addEventListener('load',()=>mv(active));addEventListener('resize',()=>mv(active));setTimeout(()=>mv(active),150);
+
+const spy=links.filter(a=>a.getAttribute('href').startsWith('#')&&a.getAttribute('href').length>1);
+function onScroll(){
+  const s=scrollY>20;
+  pill.classList.toggle('bg-black/70',s);pill.classList.toggle('bg-white/5',!s);
+  pill.classList.toggle('shadow-[0_15px_50px_rgba(0,0,0,.6)]',s);pill.classList.toggle('py-1.5',s);pill.classList.toggle('py-2',!s);
+  if(spy.length){let cur=null;spy.forEach(a=>{const el=document.querySelector(a.getAttribute('href'));if(el&&el.getBoundingClientRect().top<=innerHeight*.4)cur=a});set(cur)}
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+function toggle(open){
+  menu.classList.toggle('opacity-0',!open);menu.classList.toggle('pointer-events-none',!open);
+  document.body.style.overflow=open?'hidden':'';
+  burger.querySelector('.b1').style.transform=open?'translateY(7px) rotate(45deg)':'';
+  burger.querySelector('.b2').style.opacity=open?0:1;
+  burger.querySelector('.b3').style.transform=open?'translateY(-7px) rotate(-45deg)':'';
+  mlinks.forEach((li,i)=>{li.style.transition='all .5s '+(open?(i*70+150):0)+'ms';li.style.opacity=open?1:0;li.style.transform=open?'none':'translateY(20px)'});
+}
+mlinks.forEach(li=>{li.style.opacity=0;li.style.transform='translateY(20px)'});
+let isOpen=false;burger.onclick=()=>{isOpen=!isOpen;toggle(isOpen)};
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{isOpen=false;toggle(false)}));
+})();
+</script>
+</body>
+</html>
